@@ -1,0 +1,112 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@theme {
+  --color-barbe-escuro: #654321;
+  --color-barbe-texto: #6b4423;
+  --color-barbe-claro: #c9a577;
+  --color-barbe-areia: #d2b48c;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer components {
+  /* Fundo compartilhado */
+  .pagina-fundo {
+    @apply flex min-h-screen flex-col items-center justify-center px-4 py-10;
+    background: linear-gradient(135deg, var(--color-barbe-texto), var(--color-barbe-areia));
+  }
+
+  /* Login */
+  .login-caixa {
+    @apply w-full max-w-xs text-center;
+  }
+
+  .login-titulo {
+    @apply text-4xl text-white;
+  }
+
+  .login-subtitulo {
+    @apply mt-1 text-[10px] text-barbe-texto;
+  }
+
+  .login-form {
+    @apply mt-10 flex flex-col gap-4;
+  }
+
+  .login-link {
+    @apply mt-6 inline-block text-[10px] text-barbe-texto;
+  }
+
+  /* Campos e botões */
+  .input-campo {
+    @apply w-full rounded-2xl bg-barbe-escuro px-4 py-4 text-sm text-white outline-none placeholder:text-barbe-claro focus:ring-2 focus:ring-black/40;
+  }
+
+  .botao-principal {
+    @apply w-full rounded-2xl bg-black py-4 text-sm text-white transition hover:bg-neutral-800;
+  }
+
+  .botao-link {
+    @apply mt-5 block text-center;
+  }
+
+  /* Escolha de cadastro */
+  .registro-header {
+    @apply flex flex-col items-center;
+  }
+
+  .logo-barbeweb {
+    @apply flex items-center gap-2 text-3xl font-bold tracking-wide text-white;
+  }
+
+  .registro-subtitulo {
+    @apply mt-2 text-xs text-white/60;
+  }
+
+  .registro-cards {
+    @apply mt-8 flex w-full max-w-3xl flex-col items-center gap-6 md:flex-row md:items-stretch md:justify-center;
+  }
+
+  .card-registro {
+    @apply flex w-full max-w-[16rem] flex-col items-center rounded-3xl border border-barbe-claro/70 bg-barbe-escuro p-5 text-center;
+  }
+
+  .card-icone {
+    @apply text-barbe-claro;
+  }
+
+  .card-icone svg {
+    @apply size-10 stroke-1;
+  }
+
+  .card-titulo {
+    @apply mt-4 text-sm text-white;
+  }
+
+  .card-descricao {
+    @apply mt-3 flex-1 text-xs text-barbe-claro;
+  }
+}
