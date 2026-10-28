@@ -1,5 +1,5 @@
-import Button from "./components/button.component";
-import Input from "./components/input.component";
+import Button from "@/app/components/button.component";
+import Input from "@/app/components/input.component";
 import Link from "next/link";
 import Image from "next/image";
 
