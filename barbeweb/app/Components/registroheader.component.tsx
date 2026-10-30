@@ -1,9 +1,11 @@
-import { LogoBarbeWeb } from "./LogoBarbeWeb.Components";
+import { LogoBarbeWeb } from "./logobarbeweb.component";
+import Image from "next/image";
 
 export function RegistroHeader() {
   return (
     <header className="registro-header">
-      <LogoBarbeWeb />
+      <LogoBarbeWeb/>
+
       <p className="registro-subtitulo">Escolha como deseja se cadastrar</p>
     </header>
   );

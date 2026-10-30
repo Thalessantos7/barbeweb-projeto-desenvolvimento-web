@@ -1,18 +1,18 @@
 import { User, Scissors } from "lucide-react";
-import { CardTipoCadastro } from "./CardTipoCadastro.components";
+import { CardTipoCadastro } from "./cardtipocadastro.component";
 
 const tipos = [
   {
     icone: <User />,
     titulo: "Sou cliente",
     descricao: "Faça seu cadastro para agendar seus serviços e cuidar do seu visual.",
-    href: "/EscolhaUsuario/cliente",
+    href: "/cadastro/cliente",
   },
   {
     icone: <Scissors />,
     titulo: "Sou profissional",
     descricao: "Cadastre-se como barbeiro ou cabeleireiro e comece a atender seus clientes.",
-    href: "/EscolhaUsuario/profissional",
+    href: "/cadastro/profissional",
   },
 ];
 

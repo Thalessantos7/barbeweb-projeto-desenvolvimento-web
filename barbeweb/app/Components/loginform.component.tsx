@@ -3,8 +3,8 @@
 import { useState, type SubmitEvent } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import { Input } from "./Input.components";
-import { Button } from "./Button.components";
+import { Input } from "./input.component";
+import { Button } from "./button.component";
 
 export function LoginForm() {
   const router = useRouter();
@@ -13,7 +13,7 @@ export function LoginForm() {
 
   function handleSubmit(e: SubmitEvent<HTMLFormElement>) {
     e.preventDefault();
-    router.push("/EscolhaUsuario");
+    router.push("/escolhausuario");
   }
 
   return (
@@ -34,7 +34,7 @@ export function LoginForm() {
         <Button type="submit">Acessar</Button>
       </form>
 
-      <Link href="/EscolhaUsuario" className="login-link">
+      <Link href="/escolhausuario" className="login-link">
         Registre-se
       </Link>
     </>

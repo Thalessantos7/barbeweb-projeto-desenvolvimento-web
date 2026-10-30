@@ -1,23 +1,17 @@
-import Button from "@/app/components/button.component";
-import Input from "@/app/components/input.component";
+import { Button } from "@/app/Components/button.component";
+import { Input } from "@/app/Components/input.component";
 import Link from "next/link";
-import Image from "next/image";
+import { LogoBarbeWeb } from "@/app/Components/logobarbeweb.component";
 
 export default function CadastroCliente() {
   return (
-    <main className="flex min-h-screen flex-col items-center py-12 px-10">
+    <main className="pagina-fundo flex min-h-screen flex-col items-center py-12 px-10">
       <div className="w-full max-w-5xl flex flex-col relative mt-4">
         <div className="flex justify-between items-center w-full mb-12">
-          <Image 
-            src="/logotipo.png"
-            alt="Logo BarbeWeb"
-            width={180}
-            height={50}
-            priority
-          />
+          <LogoBarbeWeb/>
 
           <Link 
-            href="/" 
+            href="/escolhausuario" 
             className="bg-white/20 hover:bg-white/30 text-white px-6 py-2 rounded-full text-sm font-medium transition backdrop-blur-sm"
           >
             &lt; Voltar
@@ -34,6 +28,7 @@ export default function CadastroCliente() {
             <Input type="password" placeholder="🔒 Senha" />
             <Input type="text" placeholder="📝 CPF: 000.000.000-00" />
           </div>
+
           <div className="flex flex-col gap-6">
             <Input type="text" placeholder="👤 Nome" />
             <Input type="text" placeholder="📍 CEP: 00000-000" />
@@ -44,7 +39,6 @@ export default function CadastroCliente() {
         <div className="w-48 mx-auto">
           <Button>Registrar-se</Button>
         </div>
-
       </div>
     </main>
   );

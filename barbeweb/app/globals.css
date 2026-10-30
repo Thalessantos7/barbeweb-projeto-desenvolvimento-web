@@ -33,19 +33,13 @@ body {
 }
 
 @layer components {
-  /* Fundo compartilhado */
   .pagina-fundo {
     @apply flex min-h-screen flex-col items-center justify-center px-4 py-10;
     background: linear-gradient(135deg, var(--color-barbe-texto), var(--color-barbe-areia));
   }
 
-  /* Login */
   .login-caixa {
     @apply w-full max-w-xs text-center;
-  }
-
-  .login-titulo {
-    @apply text-4xl text-white;
   }
 
   .login-subtitulo {
@@ -60,7 +54,6 @@ body {
     @apply mt-6 inline-block text-[10px] text-barbe-texto;
   }
 
-  /* Campos e botões */
   .input-campo {
     @apply w-full rounded-2xl bg-barbe-escuro px-4 py-4 text-sm text-white outline-none placeholder:text-barbe-claro focus:ring-2 focus:ring-black/40;
   }
@@ -73,7 +66,6 @@ body {
     @apply mt-5 block text-center;
   }
 
-  /* Escolha de cadastro */
   .registro-header {
     @apply flex flex-col items-center;
   }

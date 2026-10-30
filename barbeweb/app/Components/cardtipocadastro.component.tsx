@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import { BotaoLink } from "./BotaoLink.components";
+import { BotaoLink } from "./link.component";
 
 type CardTipoCadastroProps = {
   icone: ReactNode;
