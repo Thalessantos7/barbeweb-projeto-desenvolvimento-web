@@ -1,8 +1,22 @@
-# Projeto Barbeweb
+# 💈 Projeto Barbeweb
 Repositório destinado ao projeto do sistema **Barbeweb** da disciplina de **Desenvolvimento Web I** do curso de **ADS**.
 
-## Resumo do Projeto
+## 📝 Resumo do Projeto
 O projeto consiste no desenvolvimento de um protótipo de aplicativo para uma barbearia local, voltado tanto para os clientes quanto para a administração do estabelecimento. O aplicativo tem como objetivo facilitar o processo de agendamento de serviços, permitindo que os clientes consultem os serviços disponíveis, os preços e os horários disponíveis. Além disso, o sistema busca melhorar a organização da agenda da barbearia e proporcionar maior praticidade no atendimento. A proposta foi desenvolvida pensando na modernização de pequenos negócios locais, utilizando a tecnologia como ferramenta para melhorar a experiência dos clientes e otimizar a gestão dos agendamentos.
+
+---
+
+## 💻 Tecnologias Utilizadas
+
+O frontend do Barbeweb está a ser desenvolvido com foco num ecossistema moderno e componentizado, garantindo uma interface responsiva e fiel ao protótipo. As principais tecnologias incluem:
+
+* 🚀 **[Next.js](https://nextjs.org/)**: Framework React responsável pela estruturação do projeto e sistema de rotas.
+* 📘 **[TypeScript](https://www.typescriptlang.org/)**: Superset de JavaScript que adiciona tipagem estática, garantindo maior segurança e previsibilidade no código.
+* 💨 **[Tailwind CSS](https://tailwindcss.com/)**: Framework CSS utilitário utilizado para a estilização rápida e construção do layout visual de forma responsiva.
+* ✨ **[Lucide React](https://lucide.dev/)**: Biblioteca de ícones limpos e consistentes, aplicados nos inputs e elementos interativos dos formulários.
+* 🎨 **[Figma](https://www.figma.com/)**: Ferramenta de design utilizada pela equipa para a criação do protótipo de alta fidelidade e planeamento da UI/UX.
+
+---
 
 ### 👥 Equipe
 - Carlos Eduardo
