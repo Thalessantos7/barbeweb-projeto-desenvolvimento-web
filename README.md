@@ -8,6 +8,21 @@ O projeto consiste no desenvolvimento de um protótipo de aplicativo para uma ba
 
 ---
 
+## ▶️ Como executar o projeto
+
+No terminal, clone o repositório e entre na pasta do aplicativo:
+
+```bash
+git clone https://github.com/Thalessantos7/projeto-desenvolvimento-web.git
+cd projeto-desenvolvimento-web/barbeweb
+npm install
+npm run dev
+```
+
+Depois, acesse [http://localhost:3000](http://localhost:3000) no navegador.
+
+---
+
 ## 💻 Tecnologias Utilizadas
 
 O frontend do Barbeweb está a ser desenvolvido com foco num ecossistema moderno e componentizado, garantindo uma interface responsiva e fiel ao protótipo. As principais tecnologias incluem:
@@ -16,7 +31,7 @@ O frontend do Barbeweb está a ser desenvolvido com foco num ecossistema moderno
 * 📘 **TypeScript**: Superset de JavaScript que adiciona tipagem estática, garantindo maior segurança e previsibilidade no código.
 * 💨 **Tailwind CSS**: Framework CSS utilitário utilizado para a estilização rápida e construção do layout visual de forma responsiva.
 * ✨ **Lucide React**: Biblioteca de ícones limpos e consistentes, aplicados nos inputs e elementos interativos dos formulários.
-* 🎨 **Figma**: Ferramenta de design utilizada pela equipa para a criação do protótipo de alta fidelidade e planeamento da UI/UX.
+* 🎨 **Figma**: Ferramenta de design utilizada pela equipe para a criação do protótipo de alta fidelidade e planejamento da UI/UX.
 
 ---
 
