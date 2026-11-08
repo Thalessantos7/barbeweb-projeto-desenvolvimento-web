@@ -65,7 +65,7 @@ export default function AgendamentoForm({
           </p>
 
           <div className="w-full max-w-xs">
-            <Button onClick={() => alert(`Agendado para ${nome}`)}>
+            <Button onClick={() => alert(`Horário agendado para ${nome} às ${horario} hs! Valor: R$${valor},00.`)}>
               Agendar
             </Button>
           </div>
