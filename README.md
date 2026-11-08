@@ -10,22 +10,38 @@ O projeto consiste no desenvolvimento de um protótipo de aplicativo para uma ba
 
 ## ▶️ Como executar o projeto
 
-Clone o repositório e, no terminal, entre na pasta do projeto:
+### Requisitos
 
-```bash
-git clone https://github.com/Thalessantos7/projeto-desenvolvimento-web.git
-cd projeto-desenvolvimento-web
-npm install
-npm run dev
-```
+Tenha o [Node.js](https://nodejs.org/) e o npm instalados.
 
-Depois, acesse [http://localhost:3000](http://localhost:3000) no navegador.
+### Passos
+
+1. Clone o repositório e entre na pasta do projeto:
+
+   ```bash
+   git clone https://github.com/Thalessantos7/projeto-desenvolvimento-web.git
+   cd projeto-desenvolvimento-web
+   ```
+
+2. Instale as dependências:
+
+   ```bash
+   npm install
+   ```
+
+3. Inicie o servidor de desenvolvimento:
+
+   ```bash
+   npm run dev
+   ```
+
+4. Abra [http://localhost:3000](http://localhost:3000) no navegador.
 
 ---
 
 ## 💻 Tecnologias Utilizadas
 
-O frontend do Barbeweb está a ser desenvolvido com foco num ecossistema moderno e componentizado, garantindo uma interface responsiva e fiel ao protótipo. As principais tecnologias incluem:
+O frontend do Barbeweb está sendo desenvolvido com foco em um ecossistema moderno e componentizado, garantindo uma interface responsiva e fiel ao protótipo. As principais tecnologias incluem:
 
 * 🚀 **Next.js**: Framework React responsável pela estruturação do projeto e sistema de rotas.
 * 📘 **TypeScript**: Superset de JavaScript que adiciona tipagem estática, garantindo maior segurança e previsibilidade no código.
@@ -35,9 +51,12 @@ O frontend do Barbeweb está a ser desenvolvido com foco num ecossistema moderno
 
 ---
 
-## 🚀 Deploy no Vercel
+## ✂️ Funcionalidades do Projeto
 
-No painel do Vercel, configure **Root Directory** para a raiz do repositório (`./`). O arquivo `vercel.json` define a instalação das dependências com `npm install` e a build com `npm run build`.
+* Tela de login e seleção de perfil para clientes e profissionais.
+* Formulários de cadastro para clientes e profissionais.
+* Consulta dos horários disponíveis da barbearia.
+* Tela de agendamento com escolha de serviço, exibição do preço e confirmação visual.
 
 ---
 
