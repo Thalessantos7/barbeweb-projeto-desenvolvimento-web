@@ -33,7 +33,9 @@ export default function CadastroProfissional() {
           </div>
 
           <div className="mt-2 w-full max-w-xs">
-            <Button>Criar conta</Button>
+            <a href="../servicos">
+              <Button>Criar conta</Button>
+            </a>
           </div>
 
           <div className="mt-6 text-sm font-medium text-[#3D2C1E]">

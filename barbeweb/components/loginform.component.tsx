@@ -14,7 +14,7 @@ export function LoginForm() {
 
   function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    router.push("/escolhausuario");
+    router.push("/servicos");
   }
 
   return (

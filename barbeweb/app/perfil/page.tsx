@@ -12,7 +12,7 @@ export default function PerfilPage() {
                     <span className="text-4xl ml-4 text-barbe-areia">Perfil</span>
 
                     <Link
-                        href="/servicos"
+                        href="servicos"
                         className="whitespace-nowrap rounded-full bg-white/20 px-4 py-2 text-xs font-medium text-white backdrop-blur-sm transition hover:bg-white/30 sm:px-5 sm:text-sm"
                     >
                         &lt; Voltar
@@ -43,21 +43,21 @@ export default function PerfilPage() {
                         senha: *******
                     </span>
 
-                    <a href="" className="w-xl pl-8 mb-6">
+                    <a href="cadastro/cliente" className="w-xl pl-8 mb-6">
                         <span id="mudarSenha" className="text-2xl text-barbe-escuro hover:text-barbe-areia">
                             <i>Mudar senha!</i>
                         </span>
                     </a>
 
                     <Link
-                            href=""
+                            href="cadastro/cliente"
                             className="bg-black hover:bg-gray-900 px-4 py-4 w-72 rounded-full text-white flex items-center justify-center"
                         >
                             Atualizar perfil
                     </Link>
 
                     <Link
-                            href=""
+                            href="/"
                             className="bg-red-700 hover:bg-red-600 px-4 py-4 w-72 rounded-full text-white flex items-center justify-center"
                         >
                             Sair

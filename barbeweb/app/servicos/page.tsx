@@ -14,7 +14,7 @@ export default function VisualizacaoDeServicosPage() {
                 <div id="container" className="flex flex-col w-383 h-248 max-w-full">
                     <div id="topo" className="flex items-center w-full mb-12">
                         <Link
-                            href=""
+                            href="perfil"
                             className="bg-gray-300 hover:bg-gray-200 w-14 h-16 rounded-full flex items-center justify-center ml-auto"
                         >
                             <User className="text-black w-7 h-8"/>

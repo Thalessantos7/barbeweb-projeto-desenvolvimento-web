@@ -40,7 +40,9 @@ export default function CadastroCliente() {
         </div>
 
         <div className="mx-auto w-full max-w-xs">
-          <Button>Registrar-se</Button>
+          <a href="../servicos">
+            <Button>Registrar-se</Button>
+          </a>
         </div>
       </div>
     </main>
