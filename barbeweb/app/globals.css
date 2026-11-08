@@ -120,6 +120,10 @@ body {
   color: black;
 }
 
+.campoInfoPerfil {
+  @apply bg-barbe-escuro text-2xl text-barbe-areia w-xl h-24 pl-8 rounded-4xl flex flex-col justify-center;
+}
+
 .botao {
   @apply px-16 py-5 rounded-full bg-black text-white;
 }

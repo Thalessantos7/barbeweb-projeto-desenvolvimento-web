@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { LogoBarbeWeb } from "@/components/logobarbeweb.component";
 import { User } from "lucide-react";
 import { ImagemCard } from "@/components/imagemCard.component";
 
@@ -21,6 +20,7 @@ export default function VisualizacaoDeServicosPage() {
                             <User className="text-black w-7 h-8"/>
                         </Link>
                     </div>
+
                     <div id="subTopo" className="flex justify-between items-center w-full mb-12">
                         <span className="text-4xl ml-4 text-barbe-areia">Serviços:</span>
 
@@ -31,21 +31,23 @@ export default function VisualizacaoDeServicosPage() {
                             Agendamento
                         </Link>
                     </div>
+
                     <div id="imagens" className="flex-1 flex flex-col">
                         <div id="primeiraLinha" className="flex flex-row justify-between mb-8">
                             <a href="">
                                 <ImagemCard backgroundImage={corteCabeloImg.src} texto="Corte de cabelo"/>
                             </a>
+
                             <a href="">
                                 <ImagemCard backgroundImage={sobrancelhaImg.src} texto="Sobrancelha"/>
                             </a>
-                            
-                            
                         </div>
+
                         <div id="segundaLinha" className="flex flex-row justify-between">
                             <a href="">
                                 <ImagemCard backgroundImage={barbaImg.src} texto="Barba"/>
                             </a>
+
                             <a href="">
                                 <ImagemCard backgroundImage={alinhamentoImg.src} texto="Alinhamento capilar e redução de volume"/>
                             </a>
@@ -53,6 +55,5 @@ export default function VisualizacaoDeServicosPage() {
                     </div>
                 </div>
             </div>
-
     )
 }
