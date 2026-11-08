@@ -1,6 +1,6 @@
-import { PaginaComFundo } from "../Components/paginacomfundo.component";
-import { LoginForm } from "../Components/loginform.component";
-import { LoginHeader } from "../Components/loginheader.component";
+import { PaginaComFundo } from "@/components/paginacomfundo.component";
+import { LoginForm } from "@/components/loginform.component";
+import { LoginHeader } from "@/components/loginheader.component";
 
 export default function LoginPage() {
   return (
