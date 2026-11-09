@@ -80,7 +80,7 @@ export default function Horarios() {
             </button>
           ) : (
             <BotaoLink
-              href="/login"
+              href="/servicos"
               className="flex w-fit items-center gap-1 rounded-full bg-white/20 px-4 py-2 text-sm text-white transition hover:bg-white/30"
             >
               <ChevronLeft size={18} /> Voltar

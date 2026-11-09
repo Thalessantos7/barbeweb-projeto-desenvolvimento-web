@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Clock, CalendarCheck } from "lucide-react";
+import { Clock, CalendarCheck, Scissors, User } from "lucide-react";
 
 export default function Menu() {
   return (
@@ -19,11 +19,21 @@ export default function Menu() {
           className="h-8 w-auto object-contain sm:h-9 md:h-auto md:w-full md:max-w-44"
         />
       </Link>
+
+      <Link href="/servicos" className="flex items-center gap-3 rounded-xl px-3 py-2 transition hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-white sm:px-4 md:w-full md:px-4 md:py-3">
+        <Scissors size={20} /> Serviços
+      </Link>
+
       <Link href="/horarios" className="flex items-center gap-3 rounded-xl px-3 py-2 transition hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-white sm:px-4 md:w-full md:px-4 md:py-3">
         <Clock size={20} /> Horários
       </Link>
+
       <Link href="/agendamento" className="flex items-center gap-3 rounded-xl px-3 py-2 transition hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-white sm:px-4 md:w-full md:px-4 md:py-3">
         <CalendarCheck size={20} /> Agendamento
+      </Link>
+
+      <Link href="/perfil" className="flex items-center gap-3 rounded-xl px-3 py-2 transition hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-white sm:px-4 md:w-full md:px-4 md:py-3">
+        <User size={20} /> Perfil
       </Link>
     </nav>
   );
