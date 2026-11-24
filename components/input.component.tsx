@@ -6,10 +6,10 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
 
 export function Input({ icone: Icon, className = "", ...props }: InputProps) {
   return (
-    <div className="relative flex items-center w-full">
+    <div className="input-div">
       {Icon && (
         <Icon 
-          className="absolute left-4 text-white/70 pointer-events-none" 
+          className="input-div-icon" 
           size={20} 
         />
       )}

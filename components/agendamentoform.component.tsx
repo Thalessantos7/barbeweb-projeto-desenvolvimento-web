@@ -23,22 +23,22 @@ export default function AgendamentoForm({
 
   return (
     <main className="fundo">
-      <section className="w-full max-w-xl rounded-[2rem] border border-white/15 bg-[#3d281b]/35 p-5 shadow-2xl backdrop-blur-sm sm:p-9">
+      <section className="agendamentoForm-section">
         <BotaoLink
           href="/horarios"
-          className="mb-6 flex w-fit items-center gap-1 rounded-full bg-white/20 px-4 py-2 text-sm text-white transition hover:bg-white/30"
+          className="agendamentoForm-section-button"
         >
           <ChevronLeft size={18} /> Voltar
         </BotaoLink>
 
         <div className="mb-8 text-center">
-          <h1 className="text-4xl font-semibold sm:text-5xl">BarbeWeb</h1>
-          <h2 className="mt-3 text-5xl font-bold text-[#f1d7b1] sm:text-6xl">
+          <h1 className="agendamentoForm-h1">BarbeWeb</h1>
+          <h2 className="agendamentoForm-h2">
             {horario} hs
           </h2>
         </div>
 
-        <div className="flex flex-col items-center gap-5">
+        <div className="agendamentoForm-div">
           <div className="w-full max-w-md">
             <Input
               type="text"
@@ -60,7 +60,7 @@ export default function AgendamentoForm({
             </select>
           </Campo>
 
-          <p className="text-2xl font-semibold sm:text-3xl">
+          <p className="agendamentoForm-p">
             Valor: {valor},00R$
           </p>
 

@@ -65,23 +65,23 @@ export default function Horarios() {
 
   return (
     <main className="fundo">
-      <section className="w-full max-w-5xl rounded-[2rem] border border-white/15 bg-[#3d281b]/35 p-5 shadow-2xl backdrop-blur-sm sm:p-8">
-        <div className="mb-6 flex items-start justify-between gap-4">
-          <h1 className="text-3xl font-semibold text-white sm:text-4xl">
+      <section className="horarios-section">
+        <div className="horarios-div">
+          <h1 className="horarios-h1">
             BarbeWeb
           </h1>
           {passo === "horario" ? (
             <button
               type="button"
               onClick={() => setPasso("data")}
-              className="flex w-fit items-center gap-1 rounded-full bg-white/20 px-4 py-2 text-sm text-white transition hover:bg-white/30"
+              className="horarios-button"
             >
               <ChevronLeft size={18} /> Voltar
             </button>
           ) : (
             <BotaoLink
               href="/servicos"
-              className="flex w-fit items-center gap-1 rounded-full bg-white/20 px-4 py-2 text-sm text-white transition hover:bg-white/30"
+              className="horarios-button"
             >
               <ChevronLeft size={18} /> Voltar
             </BotaoLink>
@@ -113,23 +113,23 @@ function SelecaoData({
   onSelecionar: (mes: number, dia: number) => void;
 }) {
   return (
-    <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+    <div className="horarios-div2">
       {MESES.map((nome, mes) => {
         const { total, primeiro } = diasDoMes(ANO, mes);
         return (
           <div
             key={nome}
-            className="rounded-xl border border-barbe-claro/40 bg-[#3d281b]/50 p-3"
+            className="horarios-div3"
           >
-            <h2 className="mb-2 text-center text-sm font-semibold text-barbe-claro">
+            <h2 className="horarios-h2">
               {nome}
             </h2>
-            <div className="mb-1 grid grid-cols-7 text-center text-[10px] text-barbe-claro/70">
+            <div className="horarios-div4">
               {DIAS_SEMANA.map((d, i) => (
                 <span key={`${d}-${i}`}>{d}</span>
               ))}
             </div>
-            <div className="grid grid-cols-7 gap-0.5 text-center text-xs text-white">
+            <div className="horarios-div5">
               {Array.from({ length: primeiro }).map((_, i) => (
                 <span key={`vazio-${mes}-${i}`} />
               ))}
@@ -192,15 +192,15 @@ function SelecaoHorario({
 
   return (
     <div className="flex flex-col gap-6">
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
+      <div className="horarios-div6">
         {periodos.map(({ titulo, faixa, Icone, horarios }) => (
           <div
             key={titulo}
-            className="rounded-xl border border-barbe-claro/50 bg-[#3d281b]/40 p-4"
+            className="horarios-div7"
           >
-            <div className="mb-4 flex items-start justify-between gap-2">
+            <div className="horarios-div8">
               <div>
-                <h2 className="text-lg font-semibold text-barbe-claro">
+                <h2 className="horarios-h2-2">
                   {titulo}
                 </h2>
                 <p className="text-xs text-barbe-claro/70">{faixa}</p>
@@ -235,7 +235,7 @@ function SelecaoHorario({
           type="button"
           disabled={!horarioSelecionado}
           onClick={onConfirmar}
-          className="flex items-center gap-1 rounded-xl bg-barbe-areia px-5 py-3 text-sm font-semibold text-[#3d281b] transition enabled:hover:bg-[#e0c49a] disabled:cursor-not-allowed disabled:opacity-40"
+          className="horarios-div9"
         >
           Confirmar horário <ChevronRight size={18} />
         </button>

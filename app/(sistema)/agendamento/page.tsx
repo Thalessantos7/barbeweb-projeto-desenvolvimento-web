@@ -13,7 +13,7 @@ export default function AgendamentoPage(props: AgendamentoPageProps) {
       fallback={
         <main className="fundo">
           <section
-            className="w-full max-w-xl rounded-[2rem] border border-white/15 bg-[#3d281b]/35 p-5 text-center text-white shadow-2xl backdrop-blur-sm sm:p-9"
+            className="agendamento-suspense"
             role="status"
           >
             Carregando agendamento...

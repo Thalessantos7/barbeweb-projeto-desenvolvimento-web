@@ -70,7 +70,7 @@ function CampoEspecialidade({
   aoAlterar: (valor: string) => void;
 }) {
   return (
-    <div className="relative flex items-center bg-[#8B6B4A] rounded-full px-4 py-2 border border-transparent cursor-pointer hover:bg-[#7A5C3D] transition-colors mt-2 focus-within:ring-2 focus-within:ring-white/40">
+    <div className="cadastroForm-div">
       <Award size={24} className="text-white/80 mr-3" />
       <div className="flex flex-col flex-1">
         <span className="text-white text-sm font-medium">Especialidade</span>
@@ -79,7 +79,7 @@ function CampoEspecialidade({
       <ChevronDown size={20} className="text-white/80" />
       <select
         aria-label="Especialidade"
-        className="absolute inset-0 h-full w-full cursor-pointer opacity-0"
+        className="cadastroForm-select"
         name="especialidade"
         required
         value={valor}
@@ -117,7 +117,7 @@ export function CadastroForm({
   if (tipo === "cliente") {
     return (
       <form className="w-full" onSubmit={enviarFormulario}>
-        <div className="mx-auto mb-8 grid w-full max-w-3xl grid-cols-1 gap-4 rounded-3xl border border-white/15 bg-[#3d281b]/30 p-4 shadow-xl backdrop-blur-sm sm:grid-cols-2 sm:gap-x-6 sm:gap-y-5 sm:p-7">
+        <div className="cadastroForm-div2">
           <div className="flex flex-col gap-4 sm:gap-5">
             {camposClienteEsquerda.map((campo) => (
               <CampoCadastro
@@ -129,7 +129,7 @@ export function CadastroForm({
             ))}
           </div>
 
-          <div className="flex flex-col gap-4 sm:gap-5">
+          <div className="cadastroForm-div3">
             {camposClienteDireita.map((campo) => (
               <CampoCadastro
                 key={campo.nome}
@@ -150,8 +150,8 @@ export function CadastroForm({
   }
 
   return (
-    <form className="mt-6 flex w-full flex-col items-center sm:mt-8" onSubmit={enviarFormulario}>
-      <div className="mb-6 flex w-full max-w-md flex-col gap-3 rounded-3xl border border-white/15 bg-[#3d281b]/30 p-4 shadow-xl backdrop-blur-sm sm:mb-8 sm:gap-4 sm:p-6">
+    <form className="cadastroForm-form" onSubmit={enviarFormulario}>
+      <div className="cadastro-div4">
         {camposProfissional.map((campo) => (
           <CampoCadastro
             key={campo.nome}
