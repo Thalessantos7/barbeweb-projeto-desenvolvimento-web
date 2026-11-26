@@ -6,3 +6,13 @@ generator client {
 datasource db {
   provider = "postgresql"
 }
+
+model Profissional {
+  idProfissional   Int     @id @default(autoincrement()) @map("id_profissional")
+  idUsuario        Int     @unique @map("id_usuario")
+  nomeProfissional String  @map("nome_profissional")
+  especialidade    String
+  ativo            Boolean @default(true)
+
+  @@map("profissional")
+}
