@@ -1,11 +1,6 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
-// Get a free hosted Postgres database in seconds: `npx create-db`
-
 generator client {
   provider = "prisma-client"
-  output   = "../app/generated/prisma"
+  output   = "../generated/prisma"
 }
 
 datasource db {
@@ -13,7 +8,18 @@ datasource db {
 }
 
 enum TipoUsuario {
-  PROFICIONAL
+  CLIENTE
+  PROFISSIONAL
+  ADMIN
+}
+
+enum StatusAgendamento {
+  PENDENTE
+  CONFIRMADO
+  EM_ANDAMENTO
+  CONCLUIDO
+  CANCELADO
+  NAO_COMPARECEU
 }
 
 model Usuario {
@@ -24,6 +30,8 @@ model Usuario {
   telefone     String?     @db.VarChar(20)
   cpf          String      @unique @db.VarChar(14)
   cep          String?     @db.VarChar(9)
-  tipo_usuario TipoUsuario @default(PROFICIONAL)
+  tipo_usuario TipoUsuario @default(PROFISSIONAL)
   criado_em    DateTime    @default(now())
+
+  @@map("usuario")
 }

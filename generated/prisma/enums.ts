@@ -10,7 +10,21 @@
 */
 
 export const TipoUsuario = {
-  PROFICIONAL: 'PROFICIONAL'
+  CLIENTE: 'CLIENTE',
+  PROFISSIONAL: 'PROFISSIONAL',
+  ADMIN: 'ADMIN'
 } as const
 
 export type TipoUsuario = (typeof TipoUsuario)[keyof typeof TipoUsuario]
+
+
+export const StatusAgendamento = {
+  PENDENTE: 'PENDENTE',
+  CONFIRMADO: 'CONFIRMADO',
+  EM_ANDAMENTO: 'EM_ANDAMENTO',
+  CONCLUIDO: 'CONCLUIDO',
+  CANCELADO: 'CANCELADO',
+  NAO_COMPARECEU: 'NAO_COMPARECEU'
+} as const
+
+export type StatusAgendamento = (typeof StatusAgendamento)[keyof typeof StatusAgendamento]
