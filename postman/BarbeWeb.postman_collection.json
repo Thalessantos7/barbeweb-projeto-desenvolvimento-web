@@ -1,0 +1,55 @@
+{
+  "info": {
+    "_postman_id": "d30156f0-6f3d-4076-b2ab-0e050cc94b84",
+    "name": "BarbeWeb",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "57307386"
+  },
+  "item": [
+    {
+      "name": "Profissionais",
+      "item": [
+        {
+          "name": "Buscar profissionais",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/profissionais",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "profissionais"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Usuários",
+      "item": []
+    },
+    {
+      "name": "Serviços",
+      "item": []
+    },
+    {
+      "name": "Agendamentos",
+      "item": []
+    },
+    {
+      "name": "Horários de Funcionamento",
+      "item": []
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:3000"
+    }
+  ]
+}

@@ -1,0 +1,386 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@theme {
+  --color-barbe-escuro: #654321;
+  --color-barbe-texto: #6b4423;
+  --color-barbe-claro: #c9a577;
+  --color-barbe-areia: #d2b48c;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer components {
+  .pagina-fundo {
+    @apply flex w-full min-w-0 flex-1 flex-col items-center justify-center px-4 py-8 sm:py-12 md:w-auto;
+    background: linear-gradient(135deg, var(--color-barbe-texto), var(--color-barbe-areia));
+  }
+
+  .login-caixa {
+    @apply w-full max-w-sm rounded-[2rem] border border-white/15 bg-[#3d281b]/35 p-6 text-center shadow-2xl backdrop-blur-sm sm:p-9;
+  }
+
+  .login-subtitulo {
+    @apply mt-2 text-sm text-white/75;
+  }
+
+  .login-form {
+    @apply mt-8 flex flex-col gap-4;
+  }
+
+  .login-link {
+    @apply mt-6 inline-block text-sm text-white/80 transition hover:text-white hover:underline;
+  }
+
+  .input-campo {
+    @apply w-full rounded-2xl bg-barbe-escuro px-4 py-3.5 text-base text-white outline-none placeholder:text-barbe-claro focus:ring-2 focus:ring-white/40;
+  }
+
+  .botao-principal {
+    @apply w-full rounded-2xl bg-black py-3.5 text-sm font-semibold text-white transition hover:bg-neutral-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white;
+  }
+
+  .botao-link {
+    @apply mt-4 block text-center;
+  }
+
+  .registro-header {
+    @apply flex flex-col items-center;
+  }
+
+  .logo-barbeweb {
+    @apply flex items-center gap-2 text-3xl font-bold tracking-wide text-white;
+  }
+
+  .registro-subtitulo {
+    @apply mt-2 text-xs text-white/60;
+  }
+
+  .registro-cards {
+    @apply mt-8 flex w-full max-w-3xl flex-col items-center gap-6 md:flex-row md:items-stretch md:justify-center;
+  }
+
+  .card-registro {
+    @apply flex w-full max-w-[16rem] flex-col items-center rounded-3xl border border-barbe-claro/70 bg-barbe-escuro p-5 text-center;
+  }
+
+  .card-icone {
+    @apply text-barbe-claro;
+  }
+
+  .card-icone svg {
+    @apply size-10 stroke-1;
+  }
+
+  .card-titulo {
+    @apply mt-4 text-sm text-white;
+  }
+
+  .card-descricao {
+    @apply mt-3 flex-1 text-xs text-barbe-claro;
+  }
+}
+
+.fundo {
+  background: linear-gradient(to bottom right, #6b4423, #d2b48c);
+  @apply flex w-full min-w-0 flex-1 flex-col items-center justify-center gap-8 p-5 text-white sm:p-8 md:w-auto;
+}
+
+.campo {
+  @apply flex items-center gap-3 w-full max-w-md px-6 py-4 rounded-full bg-[#64411f] text-[#d2b48c];
+}
+
+.campo input,
+.campo select {
+  @apply flex-1 bg-transparent outline-none;
+}
+
+.campo option {
+  color: black;
+}
+
+.campoInfoPerfil {
+  @apply bg-barbe-escuro text-2xl text-barbe-areia w-xl h-24 pl-8 rounded-4xl flex flex-col justify-center;
+}
+
+.botao {
+  @apply px-16 py-5 rounded-full bg-black text-white;
+}
+
+.cliente-main {
+  @apply items-center px-4 sm:px-8;
+}
+
+.cliente-div {
+  @apply relative mt-2 flex w-full max-w-5xl flex-col;
+}
+
+.client-div2 {
+  @apply mb-8 flex w-full items-center justify-between gap-4 sm:mb-10;
+}
+
+.cliente-link {
+  @apply whitespace-nowrap rounded-full bg-white/20 px-4 py-2 text-xs font-medium text-white backdrop-blur-sm transition hover:bg-white/30 sm:px-5 sm:text-sm;
+}
+
+.cliente-h2 {
+  @apply mb-8 text-center text-sm font-light text-white/75 sm:mb-10 md:text-2xl md:text-white/80;
+}
+
+.profissional-div {
+  @apply relative mt-2 flex w-full max-w-5xl flex-col px-4 sm:px-8;
+}
+
+.profissional-div2 {
+  @apply mt-6 text-sm font-medium text-[#3D2C1E];
+}
+
+.agendamento-suspense {
+  @apply w-full max-w-xl rounded-[2rem] border border-white/15 bg-[#3d281b]/35 p-5 text-center text-white shadow-2xl backdrop-blur-sm sm:p-9;
+}
+
+.horarios-section {
+  @apply w-full max-w-5xl rounded-[2rem] border border-white/15 bg-[#3d281b]/35 p-5 shadow-2xl backdrop-blur-sm sm:p-8;
+}
+
+.horarios-div {
+  @apply mb-6 flex items-start justify-between gap-4;
+}
+
+.horarios-h1 {
+  @apply text-3xl font-semibold text-white sm:text-4xl;
+}
+
+.horarios-button {
+  @apply flex w-fit items-center gap-1 rounded-full bg-white/20 px-4 py-2 text-sm text-white transition hover:bg-white/30;
+}
+
+.horarios-div2 {
+  @apply grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4;
+}
+
+.horarios-div3 {
+  @apply rounded-xl border border-barbe-claro/40 bg-[#3d281b]/50 p-3;
+}
+
+.horarios-h2 {
+  @apply mb-2 text-center text-sm font-semibold text-barbe-claro;
+}
+
+.horarios-div4 {
+  @apply mb-1 grid grid-cols-7 text-center text-[10px] text-barbe-claro/70;
+}
+
+.horarios-div5 {
+  @apply grid grid-cols-7 gap-0.5 text-center text-xs text-white;
+}
+
+.horarios-div6 {
+  @apply grid grid-cols-1 gap-4 md:grid-cols-3;
+}
+
+.horarios-div7 {
+  @apply rounded-xl border border-barbe-claro/50 bg-[#3d281b]/40 p-4;
+}
+
+.horarios-div8 {
+  @apply mb-4 flex items-start justify-between gap-2;
+}
+
+.horarios-h2-2 {
+  @apply text-lg font-semibold text-barbe-claro;
+}
+
+.horarios-div9 {
+  @apply flex items-center gap-1 rounded-xl bg-barbe-areia px-5 py-3 text-sm font-semibold text-[#3d281b] transition enabled:hover:bg-[#e0c49a] disabled:cursor-not-allowed disabled:opacity-40;
+}
+
+.perfil-div {
+  @apply flex min-h-screen flex-col items-center py-12 px-10;
+}
+
+.perfil-div2 {
+  @apply flex flex-col w-383 h-248 max-w-full;
+}
+
+.perfil-section {
+  @apply flex justify-between items-center w-full mb-12;
+}
+
+.perfil-link {
+  @apply whitespace-nowrap rounded-full bg-white/20 px-4 py-2 text-xs font-medium text-white backdrop-blur-sm transition hover:bg-white/30 sm:px-5 sm:text-sm;
+}
+
+.perfil-section2 {
+  @apply flex justify-center items-center mb-12;
+}
+
+.perfil-section2-div {
+  @apply rounded-full overflow-hidden w-48 h-50 border-none;
+}
+
+.perfil-section3 {
+  @apply flex flex-col items-center gap-6;
+}
+
+.perfil-span {
+  @apply text-2xl text-barbe-escuro hover:text-barbe-areia;
+}
+
+.perfil-link2 {
+  @apply bg-black hover:bg-gray-900 px-4 py-4 w-72 rounded-full text-white flex items-center justify-center;
+}
+
+.perfil-link3 {
+  @apply bg-red-700 hover:bg-red-600 px-4 py-4 w-72 rounded-full text-white flex items-center justify-center;
+}
+
+.servicos-div {
+  @apply flex min-h-screen flex-col items-center py-12 px-10;
+}
+
+.servicos-div2 {
+  @apply flex flex-col w-383 h-248 max-w-full;
+}
+
+.servicos-div3 {
+  @apply flex justify-between items-center w-full mb-12;
+}
+
+.servicos-div4 {
+  @apply flex flex-row justify-between mb-8;
+}
+
+.agendamentoForm-section {
+  @apply w-full max-w-xl rounded-[2rem] border border-white/15 bg-[#3d281b]/35 p-5 shadow-2xl backdrop-blur-sm sm:p-9;
+}
+
+.agendamentoForm-section-button {
+  @apply mb-6 flex w-fit items-center gap-1 rounded-full bg-white/20 px-4 py-2 text-sm text-white transition hover:bg-white/30;
+}
+
+.agendamentoForm-h1 {
+  @apply text-4xl font-semibold sm:text-5xl;
+}
+
+.agendamentoForm-h2 {
+  @apply mt-3 text-5xl font-bold text-[#f1d7b1] sm:text-6xl;
+}
+
+.agendamentoForm-div {
+  @apply flex flex-col items-center gap-5;
+}
+
+.agendamentoForm-p {
+  @apply text-2xl font-semibold sm:text-3xl;
+}
+
+.cadastroForm-div {
+  @apply relative flex items-center bg-[#8B6B4A] rounded-full px-4 py-2 border border-transparent cursor-pointer hover:bg-[#7A5C3D] transition-colors mt-2 focus-within:ring-2 focus-within:ring-white/40;
+}
+
+.cadastroForm-select {
+  @apply absolute inset-0 h-full w-full cursor-pointer opacity-0;
+}
+
+.cadastroForm-div2 {
+  @apply mx-auto mb-8 grid w-full max-w-3xl grid-cols-1 gap-4 rounded-3xl border border-white/15 bg-[#3d281b]/30 p-4 shadow-xl backdrop-blur-sm sm:grid-cols-2 sm:gap-x-6 sm:gap-y-5 sm:p-7;
+}
+
+.cadastroForm-div3 {
+  @apply flex flex-col gap-4 sm:gap-5;
+}
+
+.cadastroForm-form {
+  @apply mt-6 flex w-full flex-col items-center sm:mt-8;
+}
+
+.cadastro-div4 {
+  @apply mb-6 flex w-full max-w-md flex-col gap-3 rounded-3xl border border-white/15 bg-[#3d281b]/30 p-4 shadow-xl backdrop-blur-sm sm:mb-8 sm:gap-4 sm:p-6;
+}
+
+.imagemCard-div {
+  @apply w-lg h-96 flex items-center justify-center bg-cover bg-center bg-no-repeat bg-black;
+}
+
+.imagemCard-h1 {
+  @apply text-white text-4xl text-center whitespace-pre-line;
+}
+
+.input-div {
+  @apply relative flex items-center w-full;
+}
+
+.input-div-icon {
+  @apply absolute left-4 text-white/70 pointer-events-none;
+}
+
+.loginHeader-header {
+  @apply flex flex-col items-center justify-center w-full mb-6;
+}
+
+.menu-nav {
+  @apply flex w-full shrink-0 flex-row flex-wrap items-center gap-x-3 gap-y-2 bg-[#1a120c] px-4 py-3 text-white sm:gap-x-6 sm:px-6 md:sticky md:top-0 md:h-screen md:w-64 md:flex-col md:flex-nowrap md:items-stretch md:gap-8 md:border-r md:border-white/10 md:px-5 md:py-8;
+}
+
+.menu-nav-link {
+  @apply mr-2 flex shrink-0 items-center md:mr-0 md:justify-center;
+}
+
+.menu-nav-link-imag {
+  @apply h-8 w-auto object-contain sm:h-9 md:h-auto md:w-full md:max-w-44;
+}
+
+.menu-nav-link2 {
+  @apply flex items-center gap-3 rounded-xl px-3 py-2 transition hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-white sm:px-4 md:w-full md:px-4 md:py-3;
+}
+
+.registroHeader-header {
+  @apply relative mb-10 grid min-h-12.5 w-full grid-cols-[1fr_auto_1fr] items-center gap-y-3;
+}
+
+.registroHeader-div {
+  @apply col-start-2 flex items-center gap-4 max-sm:col-span-3 max-sm:col-start-1 max-sm:justify-self-center md:gap-6;
+}
+
+.registroHeader-h2 {
+  @apply text-xl md:text-2xl text-white/80 font-light hidden md:block border-l border-white/20 pl-4 md:pl-6;
+}
+
+.registroHeader-p {
+  @apply absolute -bottom-8 left-1/2 mt-2 -translate-x-1/2 text-xs whitespace-nowrap text-white/60;
+}
+
+.registroHeader-p2 {
+  @apply col-span-3 row-start-3 mt-2 text-center text-sm text-white/75 md:hidden;
+}
+
+.registroHeader-div2 {
+  @apply col-start-3 row-start-1 justify-self-end max-sm:row-start-2;
+}
+
+.registroHeader-div-link {
+  @apply rounded-full bg-white/20 px-3 py-1.5 text-xs font-medium text-white transition backdrop-blur-sm hover:bg-white/30;
+}
