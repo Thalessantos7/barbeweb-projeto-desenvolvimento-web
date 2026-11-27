@@ -1,4 +1,4 @@
-import { prisma } from "@/lib/prisma";
+import { getPrismaClient } from "@/lib/prisma";
 
 type ProfissionalRouteContext = {
   params: Promise<{ id: string }>;
@@ -24,6 +24,7 @@ export async function GET(
   }
 
   try {
+    const prisma = getPrismaClient();
     const profissional = await prisma.profissional.findUnique({
       where: { idProfissional },
     });

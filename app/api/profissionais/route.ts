@@ -1,7 +1,8 @@
-import { prisma } from "@/lib/prisma";
+import { getPrismaClient } from "@/lib/prisma";
 
 export async function GET() {
   try {
+    const prisma = getPrismaClient();
     const profissionais = await prisma.profissional.findMany({
       orderBy: { idProfissional: "asc" },
     });

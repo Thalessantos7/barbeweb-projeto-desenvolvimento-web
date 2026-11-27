@@ -7,12 +7,43 @@ datasource db {
   provider = "postgresql"
 }
 
+enum TipoUsuario {
+  CLIENTE
+  PROFISSIONAL
+  ADMIN
+}
+
+enum StatusAgendamento {
+  PENDENTE
+  CONFIRMADO
+  EM_ANDAMENTO
+  CONCLUIDO
+  CANCELADO
+  NAO_COMPARECEU
+}
+
+model Usuario {
+  id_usuario   Int         @id @default(autoincrement())
+  nome         String      @db.VarChar(100)
+  email        String      @unique @db.VarChar(255)
+  senha_hash   String      @db.VarChar(255)
+  telefone     String?     @db.VarChar(20)
+  cpf          String      @unique @db.VarChar(14)
+  cep          String?     @db.VarChar(9)
+  tipo_usuario TipoUsuario @default(PROFISSIONAL)
+  criado_em    DateTime    @default(now())
+  profissional Profissional?
+
+  @@map("usuario")
+}
+
 model Profissional {
   idProfissional   Int     @id @default(autoincrement()) @map("id_profissional")
   idUsuario        Int     @unique @map("id_usuario")
   nomeProfissional String  @map("nome_profissional")
   especialidade    String
   ativo            Boolean @default(true)
+  usuario          Usuario @relation(fields: [idUsuario], references: [id_usuario])
 
   @@map("profissional")
 }
