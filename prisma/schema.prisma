@@ -32,6 +32,18 @@ model Usuario {
   cep          String?     @db.VarChar(9)
   tipo_usuario TipoUsuario @default(PROFISSIONAL)
   criado_em    DateTime    @default(now())
+  profissional Profissional?
 
   @@map("usuario")
+}
+
+model Profissional {
+  idProfissional   Int     @id @default(autoincrement()) @map("id_profissional")
+  idUsuario        Int     @unique @map("id_usuario")
+  nomeProfissional String  @map("nome_profissional")
+  especialidade    String
+  ativo            Boolean @default(true)
+  usuario          Usuario @relation(fields: [idUsuario], references: [id_usuario])
+
+  @@map("profissional")
 }
